@@ -47,7 +47,7 @@ public class ListFragment extends Fragment {
         mListAdapter = new ListAdapter();
         mItemList.setAdapter(mListAdapter);
 
-        mListAdapter.getItemConnectableObservable().subscribe(new Action1<Item>() {
+        mListAdapter.getItemPublishSubject().subscribe(new Action1<Item>() {
             @Override
             public void call(Item item) {
                 Log.d(ListFragment.class.getSimpleName(), String.format("Item: %s", item.name));
@@ -66,10 +66,35 @@ public class ListFragment extends Fragment {
 
     private List<Item> createItems() {
         final List<Item> items = new ArrayList<>();
-        items.add(new Item("AAAAA"));
-        items.add(new Item("BBBBB"));
-        items.add(new Item("CCCCC"));
-        items.add(new Item("DDDDD"));
+
+        for (int i = 0; i < 10; i++) {
+            items.add(new Item("AAAAA"));
+            items.add(new Item("BBBBB"));
+            items.add(new Item("CCCCC"));
+            items.add(new Item("DDDDD"));
+            items.add(new Item("EEEEE"));
+            items.add(new Item("FFFFF"));
+            items.add(new Item("GGGGG"));
+            items.add(new Item("HHHHH"));
+            items.add(new Item("IIIII"));
+            items.add(new Item("JJJJJ"));
+            items.add(new Item("KKKKK"));
+            items.add(new Item("LLLLL"));
+            items.add(new Item("MMMMM"));
+            items.add(new Item("NNNNN"));
+            items.add(new Item("OOOOO"));
+            items.add(new Item("PPPPP"));
+            items.add(new Item("QQQQQ"));
+            items.add(new Item("RRRRR"));
+            items.add(new Item("SSSSS"));
+            items.add(new Item("TTTTT"));
+            items.add(new Item("UUUUU"));
+            items.add(new Item("VVVVV"));
+            items.add(new Item("WWWWW"));
+            items.add(new Item("XXXXX"));
+            items.add(new Item("YYYYY"));
+            items.add(new Item("ZZZZZ"));
+        }
 
         return items;
     }
