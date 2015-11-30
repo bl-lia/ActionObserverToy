@@ -1,2 +1,2 @@
-# ClickObserverToy
+# ActionObserverToy
 RecyclerView.ViewHolderの各ViewのClick Listenerを、Observableで引き渡してFragmentでsubscribe出来るようにしたサンプルアプリ
